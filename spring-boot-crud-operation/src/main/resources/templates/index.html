@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Data Management</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Students List</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Student Name</th>
+					<th>student EmailId</th>
+					<th>student Mobile No.</th>
+					<th>student DOB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="STUDENT : ${ListStudents}">
+					<td th:text="${STUDENT.name}"></td>
+					<td th:text="${STUDENT.mobileNo}"></td>
+					<td th:text="${STUDENT.email}"></td>
+					<td th:text="${STUDENT.dateOfBirth}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
